@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://loowyvis.github.io/snt/Theme5_web/cours/">
+        <link rel="canonical" href="https://loowyvis.github.io/snt/IA/activite2/">
       
       
-        <link rel="prev" href="../activite_2_des_liens/">
+        <link rel="prev" href="../activite1/">
       
       
-        <link rel="next" href="../../stock_cache/%C3%A0_venir/Theme2_Localisation_Cartographie/cours/">
+        <link rel="next" href="../activite3/">
       
       
       <link rel="icon" href="../../xtra/favSNT.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>le World Wide Web - SNT</title>
+        <title>Activité 2 : Comprendre les algorithmes de génération d'images. - SNT</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#le-world-wide-web" class="md-skip">
+        <a href="#activite-2-comprendre-les-algorithmes-de-generation-dimages" class="md-skip">
           Aller au contenu
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              le World Wide Web
+              Activité 2 : Comprendre les algorithmes de génération d'images.
             
           </span>
         </div>
@@ -334,24 +334,52 @@
 
 
 
-<h1 id="le-world-wide-web">le World Wide Web<a class="headerlink" href="#le-world-wide-web" title="Permanent link">⚓︎</a></h1>
-<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">⚓︎</a></h2>
-<iframe width="1221" height="687" src="https://www.youtube.com/embed/GqD6AiaRo3U" title="MOOC SNT / Le web, &quot;site internet&quot; ou &quot;site web&quot; ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h1 id="activite-2-comprendre-les-algorithmes-de-generation-dimages">Activité 2 : Comprendre les algorithmes de génération d'images.<a class="headerlink" href="#activite-2-comprendre-les-algorithmes-de-generation-dimages" title="Permanent link">⚓︎</a></h1>
+<p>Nous allons travailler avec l'<strong>excellente</strong> vidéo de David Louapre (de la chaîne YouTube <a class="" href="https://www.youtube.com/scienceetonnante" target="_blank">ScienceEtonnante</a>)</p>
+<iframe width="683" height="384" src="https://www.youtube.com/embed/tdelUss-5hY?t=920" title="Comment ces IA inventent-elles des images ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h2 id="2-activite-1-html-et-css">2. Activité 1 : HTML et CSS<a class="headerlink" href="#2-activite-1-html-et-css" title="Permanent link">⚓︎</a></h2>
-<p><a class="md-button" href="../activite_1_html_css/"> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Activité 1 : <code>html / css</code>  </a></p>
-<h2 id="3-activite-2-des-liens-et-des-images">3. Activité 2 : des liens et des images<a class="headerlink" href="#3-activite-2-des-liens-et-des-images" title="Permanent link">⚓︎</a></h2>
-<p><a class="md-button" href="../activite_2_des_liens/"> <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> Activité 2 : travail sur les liens  </a></p>
-<h2 id="4-activite-3-a-vous">4. Activité 3 : à vous !<a class="headerlink" href="#4-activite-3-a-vous" title="Permanent link">⚓︎</a></h2>
-<p>Vous devez créer une page personnelle sur cette activité Capytale <a class="" href="https://capytale2.ac-paris.fr/web/c/c067-3484370" target="_blank">https://capytale2.ac-paris.fr/web/c/c067-3484370</a></p>
-<p>Vous devez vous servir des notions vues dans les deux activités précédentes, mais aussi aller trouver tout seul les techniques qui vont vous manquer.</p>
-<p>Quelques ressources :</p>
+<p><em>Lire à partir de 15:20</em></p>
+<h2 id="1-le-principe-de-fonctionnement-des-algorithmes-de-generations-dimage-par-diffusion">1. Le principe de fonctionnement des algorithmes de générations d'image par «diffusion»<a class="headerlink" href="#1-le-principe-de-fonctionnement-des-algorithmes-de-generations-dimage-par-diffusion" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-le-debruitage-progressif-sur-un-seul-type-dimages">1.1 Le débruitage progressif sur un seul type d'images<a class="headerlink" href="#11-le-debruitage-progressif-sur-un-seul-type-dimages" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li><a class="" href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">https://developer.mozilla.org/fr/docs/Web/HTML</a></li>
-<li><a class="" href="https://www.ionos.fr/digitalguide/sites-internet/developpement-web/balises-htlm/" target="_blank">https://www.ionos.fr/digitalguide/sites-internet/developpement-web/balises-htlm/</a></li>
+<li>
+<p>étape 1 : on bruite des images de chat
+<img alt="image" class="center" src="../data/v1.png" width="60%" /></p>
+</li>
+<li>
+<p>étape 2 : on entraine un réseau de neurones à débruiter ces images de chat
+<img alt="image" class="center" src="../data/v2.png" width="60%" /></p>
+</li>
+<li>
+<p>étape 3: une fois entrainé, on fait débruiter au réseau de neurones une image constituée de pixels aléatoires : cela «hallucine» un chat.
+<img alt="image" class="center" src="../data/v3.png" width="60%" /></p>
+</li>
 </ul>
-<p>Sinon, une question bien posée sur un moteur de recherche sera souvent efficace.</p>
-<p>Vous pouvez aussi utiliser une IA de type Chat-GPT, (par exemple <a class="" href="https://www.perplexity.ai/" target="_blank">https://www.perplexity.ai/</a>, qui ne requiert pas d'inscription).</p>
+<p>Sites permettant de générer :</p>
+<ul>
+<li>des fausses personnes : <a class="" href="https://thispersondoesnotexist.com/" target="_blank">https://thispersondoesnotexist.com/</a></li>
+<li>des faux chats: <a class="" href="https://thesecatsdonotexist.com/" target="_blank">https://thesecatsdonotexist.com/</a></li>
+<li>des fausses voitures: <a class="" href="https://www.thisautomobiledoesnotexist.com/" target="_blank">https://www.thisautomobiledoesnotexist.com/</a></li>
+</ul>
+<h3 id="12-le-debruitage-progressif-polyvalent">1.2 Le débruitage progressif polyvalent<a class="headerlink" href="#12-le-debruitage-progressif-polyvalent" title="Permanent link">⚓︎</a></h3>
+<p><img alt="image" class="center" src="../data/v4.png" width="60%" /></p>
+<p>Le réseau est maintenant entraîné à créer des images de plusieurs catégories différentes (chat, arbre, voiture...)</p>
+<h3 id="13-le-plongement-de-la-phrase-descriptive">1.3 Le «plongement» de la phrase descriptive<a class="headerlink" href="#13-le-plongement-de-la-phrase-descriptive" title="Permanent link">⚓︎</a></h3>
+<p>Chaque instruction peut être «plongée» dans un espace mathématique selon le sens de ses mots:
+<img alt="image" class="center" src="../data/v5.png" width="60%" /></p>
+<p>On entraine notre réseau sur chacun de ces plongements :
+<img alt="image" class="center" src="../data/v6.png" width="60%" /></p>
+<p>Le réseau est maintenant capable de créer une image décrite en langage naturel, et non plus simplement par une catégorie donnée.</p>
+<p><img alt="image" class="center" src="../data/v7.png" width="60%" /></p>
+<h2 id="2-sites-de-creation-dimages-sans-connexion">2. Sites de création d'images (sans connexion)<a class="headerlink" href="#2-sites-de-creation-dimages-sans-connexion" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>
+<p>Pour voir le débruitage progressif : <a class="" href="https://fr.vittascience.com/ia/image-generate.php" target="_blank">https://fr.vittascience.com/ia/image-generate.php</a></p>
+</li>
+<li>
+<p>Pour avoir des images de bien meilleure qualité : <a class="" href="https://perchance.org/ai-text-to-image-generator" target="_blank">https://perchance.org/ai-text-to-image-generator</a></p>
+</li>
+</ul>
 
 
 
