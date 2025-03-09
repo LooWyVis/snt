@@ -1,35 +1,14 @@
 
-
-{#
-!!! abstract ":star: Première séance :star:"
-    :white_check_mark: Vérification des accès aux [services numériques](Introduction/services_num/index.md)
-
-    :white_check_mark: Inscription à la plateforme [Moodle](Introduction/moodle/moodle/)
-
-    :hourglass: Pour patienter : découverte de Python avec [py-rates](https://py-rates.fr/){. target="_blank"}
-#}
-
-
 !!! abstract ":star: Séance actuelle :star:"
-    - [Introduction](./Introduction/services_num/){. target="_blank"}
-
-
+    - [Introduction](Introduction/services_num/index.md){. target="_blank"}
 
 
 ![image](data/logo_SNT.png){: .center width=30%}
 
 
-
 ## Programme 
 
 !!! abstract "Le [programme](https://eduscol.education.fr/1670/programmes-et-ressources-en-sciences-numeriques-et-technologie-voie-gt) de SNT est articulé autour de sept thèmes:"
-
-    === "Données structurées"
-        ![](data/logo_data.png){align=left}
-        
-        Les données constituent la matière première de toute activité numérique. Afin de permettre leur réutilisation, il est nécessaire de les conserver de manière persistante. Les structurer correctement garantit que l’on puisse les exploiter facilement pour produire de l’information.
-
-        Comment traiter ces données ?
 
     === "Photo numérique"
 
@@ -66,6 +45,13 @@
         La cartographie est essentielle pour beaucoup d’activités : agriculture, urbanisme, transports, loisirs, etc. Elle a été révolutionnée par l’arrivée des cartes numériques accessibles depuis les ordinateurs, tablettes et téléphones, bien plus souples à l’usage que les cartes papier.
 
         Comment se repérer sur ces cartes et comment calculer un itinéraire?
+
+    === "Données structurées"
+    ![](data/logo_data.png){align=left}
+    
+    Les données constituent la matière première de toute activité numérique. Afin de permettre leur réutilisation, il est nécessaire de les conserver de manière persistante. Les structurer correctement garantit que l’on puisse les exploiter facilement pour produire de l’information.
+
+    Comment traiter ces données ?
 
     === "Objets connectés"
         ![](data/logo_objets.png){align=left}
