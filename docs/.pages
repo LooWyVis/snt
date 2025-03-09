@@ -1,3 +1,4 @@
 nav:
     - Accueil : index.md
-    - Introduction : Introduction/services_num/index.md
+    - Introduction : Introduction/services_num/
+    - ...
