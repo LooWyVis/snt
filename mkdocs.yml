@@ -108,7 +108,7 @@ extra_css:
   - xtra/stylesheets/pyoditeur.css
 
 
-copyright:  CC BY-SA / G.Lassus
+copyright: 'CC BY-SA / Resources issues du Github de <a href="https://github.com/glassus" target="_blank">G.Lassus</a>'
 
 
 validation:

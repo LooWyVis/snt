@@ -1,5 +1,5 @@
-hide : false
-title : Projet IA - EMC
+hide : true
+title : IA
 nav :
     - Cours : cours.md
     - ...

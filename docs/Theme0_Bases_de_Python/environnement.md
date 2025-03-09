@@ -32,12 +32,6 @@ Rendez-vous sur la page [https://console.basthon.fr/](https://console.basthon.fr
 
 ![](data/bast1.png)
 
-### 2.3 Directement sur ce site !
-
-Écrivez dans la fenêtre ci-dessous le code ```print("Hello World !")``` puis cliquez sur le triangle noir.
-
-{{ IDEv() }}
-
 
 ## 3. Script ou console ???
 

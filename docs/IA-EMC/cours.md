@@ -1,6 +1,5 @@
-# Projet SNT-EMC : L'Intelligence Artificielle et l'information
+# L'Intelligence Artificielle et l'information
 
-:arrow_right: rendez-vous sur [Lycée Connecté](https://jeunes.nouvelle-aquitaine.fr/formation/au-lycee/lycee-connecte-ent){. target="_blank"} pour répondre au sondage sur l'IA.
 
 ![image](data/ban.png){: .center}
 
