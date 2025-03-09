@@ -1,0 +1,2357 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://loowyvis.github.io/snt/Theme0_Bases_de_Python/cours/">
+      
+      
+        <link rel="prev" href="../environnement/">
+      
+      
+        <link rel="next" href="../Exercice_Perseverance/">
+      
+      
+      <link rel="icon" href="../../xtra/favSNT.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Cours de Python - SNT</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+    
+      
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-variables-et-affectation" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="SNT" class="md-header__button md-logo" aria-label="SNT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SNT
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours de Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../IA-EMC/cours/" class="md-tabs__link">
+          
+  
+  Projet IA - EMC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Introduction/services_num/" class="md-tabs__link">
+          
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../TT_PIX/cours/" class="md-tabs__link">
+          
+  
+  PIX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../environnement/" class="md-tabs__link">
+          
+  
+  T0 Débuter en Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme1_Photographie_numerique/cours/" class="md-tabs__link">
+          
+  
+  T1 Photographie numérique
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme2_Localisation_Cartographie/cours/" class="md-tabs__link">
+          
+  
+  T2 Localisation-Cartographie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme3_Reseaux_Sociaux/cours/" class="md-tabs__link">
+          
+  
+  T3 Réseaux Sociaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme4_Objets_Connectes/cours/" class="md-tabs__link">
+          
+  
+  T4 Objets connectés
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme5_web/cours/" class="md-tabs__link">
+          
+  
+  T5 Le web
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SNT" class="md-nav__button md-logo" aria-label="SNT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
+
+    </a>
+    SNT
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projet IA - EMC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projet IA - EMC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IA-EMC/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IA-EMC/activite1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 1 : Entraînement d'un modèle de classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IA-EMC/activite2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 2 : Comprendre les algorithmes de génération d'images.
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IA-EMC/activite3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 3 : IA générative textuelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Les services numériques au lycée
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Les services numériques au lycée
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduction/services_num/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les services numériques au lycée
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prise en main de Moodle sur LycéeConnecté
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prise en main de Moodle sur LycéeConnecté
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduction/moodle/moodle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La plateforme d'apprentissage Moodle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Le binaire et le codage de l'information numérique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Le binaire et le codage de l'information numérique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduction/binaire/binaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le binaire et le codage de l'information numérique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PIX
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            PIX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TT_PIX/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activités
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    T0 Débuter en Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            T0 Débuter en Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environnement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environnement de travail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cours de Python
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Cours de Python
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-et-affectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Variables et affectation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables et affectation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-stocker-une-valeur-dans-une-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Stocker une valeur dans une variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-recuperer-la-valeur-stockee-dans-une-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Récupérer la valeur stockée dans une variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-modifier-le-contenu-dune-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Modifier le contenu d'une variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-jouer-avec-les-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Jouer avec les variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-vers-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Vers les tests...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-instructions-conditionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Instructions conditionnelles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Instructions conditionnelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-premier-test-elementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Premier test élémentaire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-fonctions-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Les fonctions en Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Les fonctions en Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-principe-general-a-quoi-sert-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Principe général : à quoi sert une fonction ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-premieres-fonctions-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Premières fonctions en Python.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-parametres-dune-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Paramètres d'une fonction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-fonctions-utilisant-dautres-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Fonctions utilisant d'autres fonctions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-fonctions-renvoyant-une-valeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Fonctions renvoyant une valeur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exercice_Perseverance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le message secret de Perseverance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T1 Photographie numérique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            T1 Photographie numérique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme1_Photographie_numerique/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme1_Photographie_numerique/incrustation_image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 2 : Incrustation d'une image en Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme1_Photographie_numerique/modification_image/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 1 : modification d'une image en Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T2 Localisation-Cartographie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            T2 Localisation-Cartographie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme2_Localisation_Cartographie/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme2_Localisation_Cartographie/Activit%C3%A91_GPS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 1 : Coordonnées GPS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme2_Localisation_Cartographie/Activit%C3%A92_Exif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 2 : Métadonnées EXIF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme2_Localisation_Cartographie/Activit%C3%A93_GeoPortail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 3 : Utilisation de GéoPortail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme2_Localisation_Cartographie/Activit%C3%A94_Itineraires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 4 : itinéraires
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T3 Réseaux Sociaux
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            T3 Réseaux Sociaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme3_Reseaux_Sociaux/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme3_Reseaux_Sociaux/Activit%C3%A91_Expos%C3%A9s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 1 : Exposés
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme3_Reseaux_Sociaux/Activit%C3%A92_Graphes_amis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 2 : Réseaux sociaux et graphes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme3_Reseaux_Sociaux/Activit%C3%A93_cyberharc%C3%A8lement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 3 : Cyberharcèlement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme3_Reseaux_Sociaux/Activit%C3%A94_Facebook-Instagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 4 : Étude d'articles sur les réseaux sociaux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T4 Objets connectés
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            T4 Objets connectés
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme4_Objets_Connectes/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T5 Le web
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            T5 Le web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme5_web/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cours
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+                  
+
+
+
+  <h1>Cours de Python</h1>
+
+<h2 id="1-variables-et-affectation">1. Variables et affectation<a class="headerlink" href="#1-variables-et-affectation" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-stocker-une-valeur-dans-une-variable">1.1 Stocker une valeur dans une variable<a class="headerlink" href="#11-stocker-une-valeur-dans-une-variable" title="Permanent link">⚓︎</a></h3>
+<p>La mémoire d'un ordinateur peut-être perçue comme un ensemble de tiroirs.</p>
+<p>Écrire  l'instruction :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div></td></tr></table></div></p>
+<p>va provoquer chez l'ordinateur (en simplifiant beaucoup) le comportement suivant :</p>
+<ul>
+<li>Est-ce que je possède <strong>déjà</strong> un tiroir appelé <code>a</code> ? <ul>
+<li>si oui, je me positionne devant.</li>
+<li>si non, je crée un tiroir appelé <code>a</code>.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" class="center" src="../data/tiroirs.png" /></p>
+<ul>
+<li>J'ouvre le tiroir et j'y dépose la valeur numérique 2. Si le tiroir contenait déjà une valeur, celle-ci disparaît. On dit souvent qu'elle est <strong>écrasée</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<p>Cette présentation est utile pour comprendre la notion de variable dans une première approche, mais elle n'est pas vraiment fidèle à la réalité.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Signification du signe =</p>
+<p>Le sens du signe = n'est donc <strong>pas du tout le même</strong> qu'en mathématiques. On dit que c'est un signe d'<strong>affectation</strong>. </p>
+<p>L'écriture a = 2 signifie donc a ← 2 et peut se lire «a reçoit la valeur 2» ou encore «on affecte à a la valeur 2».</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<p>Ici, nous avons stocké un nombre (le nombre 2) dans la variable <code>a</code>. Mais une variable peut contenir une phrase, une liste de nombres, une image... beaucoup d'objets de <strong>type</strong> différent.</p>
+</div>
+<h3 id="12-recuperer-la-valeur-stockee-dans-une-variable">1.2  Récupérer la valeur stockée dans une variable<a class="headerlink" href="#12-recuperer-la-valeur-stockee-dans-une-variable" title="Permanent link">⚓︎</a></h3>
+<h4 id="121-dans-un-script">1.2.1 Dans un script<a class="headerlink" href="#121-dans-un-script" title="Permanent link">⚓︎</a></h4>
+<p>Dans un script Python, pour afficher le contenu d'une variable, on utilisera la fonction <code>print()</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">maison</span> <span class="o">=</span> <span class="s2">&quot;Serdaigle&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">maison</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>renverra la sortie suivante :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">2</span>
+<span class="s1">&#39;Serdaigle&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="ide_classe"><div class="wrapper"><div class="interior_wrapper"><div id="editor_1"></div></div><div id="term_editor_1" class="term_editor"></div></div><button class="emoji" onclick='interpretACE("editor_1","v")'>▶️</button><span style="indent-text:5em"> </span><button class="emoji" onclick='download_file("editor_1","")'>⤵️</button><span style="indent-text:5em"> </span><button class="emoji" onclick="document.getElementById('input_editor_1').click()">⤴️</button>                <input type="file" id="input_editor_1" name="file" enctype="multipart/form-data" class="hide"/></div>
+<p><span id="content_editor_1" class="hide"></span><span id="corr_content_editor_1" class="hide"></span></p>
+<h4 id="122-en-console">1.2.2 En console<a class="headerlink" href="#122-en-console" title="Permanent link">⚓︎</a></h4>
+<p>Dans la console interactive de Python, c'est encore plus simple, il suffit d'écrire le nom de la variable et d'appuyer sur Entrée.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maison</span>
+<span class="s1">&#39;Serdaigle&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;b&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div></td></tr></table></div>
+<div onclick='start_term("id0")' id="fake_id0" class="terminal_f"><label class="terminal"><span>>>> </span></label></div>
+<div id="id0" class="hide"></div>
+
+<p>Bien sûr, il faut que la variable ait été créée au préalable... sinon Python renvoie un message d'erreur.</p>
+<h3 id="13-modifier-le-contenu-dune-variable">1.3 Modifier le contenu d'une variable<a class="headerlink" href="#13-modifier-le-contenu-dune-variable" title="Permanent link">⚓︎</a></h3>
+<h4 id="131-ecraser-une-ancienne-valeur">1.3.1 Écraser une ancienne valeur<a class="headerlink" href="#131-ecraser-une-ancienne-valeur" title="Permanent link">⚓︎</a></h4>
+<p>Comme déjà évoqué, affecter une nouvelle valeur dans une variable déjà existante écrasera l'ancienne valeur. C'est très pratique, mais parfois dangereux.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;mon mot de passe ultrasecret&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="s2">&quot;mon mot de passe ultrasecret&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">3</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="132-utiliser-des-variables-pour-calculer-de-nouvelles-variables">1.3.2 Utiliser des variables pour calculer de nouvelles variables<a class="headerlink" href="#132-utiliser-des-variables-pour-calculer-de-nouvelles-variables" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">AB</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">AC</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">BC</span> <span class="o">=</span> <span class="p">(</span><span class="n">AB</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">AC</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;l&#39;hypoténuse mesure&quot;</span><span class="p">,</span> <span class="n">BC</span><span class="p">,</span> <span class="s2">&quot;centimètres&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<p>En Python, la puissance s'obtient par <code>**</code>. La racine carrée est une puissance <code>0.5</code>.</p>
+</div>
+<h4 id="133-modifier-une-variable-a-partir-delle-meme">1.3.3 Modifier une variable à partir d'elle-même<a class="headerlink" href="#133-modifier-une-variable-a-partir-delle-meme" title="Permanent link">⚓︎</a></h4>
+<p>L'instruction
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+écrit une égalité mathématique fort peu intéressante (toujours fausse, car elle est équivalente à l'égalité 0 = 1), 
+mais est une écriture informatique très utile : la variable <code>a</code> se modifie à partir d'elle-même.</p>
+<p><img alt="image" class="center" src="../data/tir_var3.png" width="20%" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>renverra 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="mi">11</span>
+</code></pre></div></td></tr></table></div></p>
+<p>La compréhension de l'instruction <code>a = a + 1</code>  est <strong>essentielle</strong>. </p>
+<p><img alt="" class="center" src="../data/memes.png" /></p>
+<h4 id="134-inverser-deux-variables">1.3.4 Inverser deux variables<a class="headerlink" href="#134-inverser-deux-variables" title="Permanent link">⚓︎</a></h4>
+<p>Imaginons les variables suivantes :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">maisonHarry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
+<span class="n">maisonMalfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Il semblerait qu'une erreur se soit glissée dans ces déclarations de variables... Mais comment faire pour inverser les valeurs ?</p>
+<p>▸ <strong>Méthode naïve</strong></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">maisonHarry</span> <span class="o">=</span> <span class="n">maisonMalfoy</span>
+<span class="n">maisonMalfoy</span> <span class="o">=</span> <span class="n">maisonHarry</span>
+</code></pre></div></td></tr></table></div>
+à l'arrivée, on se retrouve avec 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maisonHarry</span>
+<span class="s1">&#39;Gryffondor&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maisonMalfoy</span>
+<span class="s1">&#39;Gryffondor&#39;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>En effet, la variable <code>maisonHarry</code>  a été écrasée...  et on ne peut plus retrouver sa valeur pour la donner à <code>maisonMalfoy</code>.</p>
+<p>▸ <strong>La solution universelle</strong></p>
+<p>Nous allons passer par une variable temporaire qui nous permettra de stocker la valeur écrasée.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">maisonHarry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
+<span class="n">maisonMalfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
+
+<span class="c1"># on procède à l&#39;échange</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">maisonHarry</span>
+<span class="n">maisonHarry</span> <span class="o">=</span> <span class="n">maisonMalfoy</span>
+<span class="n">maisonMalfoy</span> <span class="o">=</span> <span class="n">t</span>
+</code></pre></div></td></tr></table></div>
+<p>Ainsi, 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maisonHarry</span>
+<span class="s1">&#39;Gryffondor&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maisonMalfoy</span>
+<span class="s1">&#39;Serpentard&#39;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>▸ <strong>La solution «pythonesque»</strong></p>
+<p>Chaque langage de programmation ayant ses particularités, Python propose une syntaxe particulièrement agréable pour pouvoir faire l'échange de deux variables sans faire intervenir une variable temporaire :</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># on procède à l&#39;échange</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">a</span>
+</code></pre></div></td></tr></table></div>
+Ainsi,
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="mi">2</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Les variables ont bien été échangées. </p>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<p>Python ne fait que nous faciliter le travail. Il a dû lui-même créer une variable temporaire pour stocker la variable <code>a</code> avant de l'écraser : la simultanéité n'existe pas en informatique !</p>
+</div>
+<h3 id="14-jouer-avec-les-variables">1.4 Jouer avec les variables<a class="headerlink" href="#14-jouer-avec-les-variables" title="Permanent link">⚓︎</a></h3>
+<p>L'objet de l'activité est de prendre un code pré-existant, produisant une animation graphique, et de le modifier petit à petit pour comprendre le rôle de chaque élément. </p>
+<p>Dans la fenêtre ci-dessous, cliquer sur le bouton Play pour démarrer l'animation.</p>
+<iframe src="https://trinket.io/embed/python/bd1c5be675" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>Vous pouvez coder directement dans la fenêtre ci-dessus, ou bien ouvrir <a href="https://trinket.io/embed/python/bd1c5be675" target="_blank">ce lien</a> dans une nouvelle fenêtre (clic-droit «Ouvrir le lien dans une nouvelle fenêtre) afin de pouvoir avoir les instructions et la fenêtre de code côte-à-côte.</p>
+<h4 id="141-quelques-indications-sur-le-code-dorigine">1.4.1 Quelques indications sur le code d'origine<a class="headerlink" href="#141-quelques-indications-sur-le-code-dorigine" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li><code>background(r, g, b)</code> : l'arrière-plan sera de la couleur <code>(r,g,b)</code>, où <code>r</code>, <code>g</code> et <code>b</code> sont des nombres compris entre 0 et 255, déterminant les composantes rouge, verte et bleue de la couleur totale. Voir  <a href="https://www.w3schools.com/colors/colors_rgb.asp" target="_blank">ici</a> .</li>
+<li>
+<p><code>size(x,y)</code> : l'espace de dessin mesurera <code>x</code> pixels de large sur <code>y</code> pixels de haut.</p>
+</li>
+<li>
+<p><code>frameRate(n)</code> : l'animation sera rafraîchie <code>n</code> fois par seconde.</p>
+</li>
+<li>
+<p><code>noStroke()</code> : les futurs tracés n'auront pas de contour.</p>
+</li>
+<li>
+<p><code>fill(r, g, b)</code> : les futures figures tracées seront remplies avec la couleur <code>(r,g,b)</code>.</p>
+</li>
+<li>
+<p><code>randint(a,b)</code> : renvoie un nombre pseudo-aléatoire entre <code>a</code> et <code>b</code>.</p>
+</li>
+<li>
+<p><code>ellipse(x, y, rayon, rayon</code> : trace un disque de centre <code>(x, y)</code> et de rayon <code>rayon</code>.</p>
+</li>
+</ul>
+<h4 id="142-manipulations-a-effectuer">1.4.2 Manipulations à effectuer<a class="headerlink" href="#142-manipulations-a-effectuer" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>Modifier alternativement les paramètres <code>rayon</code>, <code>r</code>, <code>g</code> ou <code>b</code> afin d'observer et comprendre leur rôle. .</li>
+<li>Modifier le <code>frameRate</code> pour observer son rôle.</li>
+<li>Faire en sorte que les disques dessinés soient de couleur aléatoire.</li>
+<li>Faire en sorte que les disques soient de rayon aléatoire.</li>
+<li>Les instructions <code>mouseX</code> et <code>mouseY</code> renvoient respectivement l'abscisse et l'ordonnée de la souris. Faire en sorte que les disques se dessinent là où se trouve la souris.</li>
+<li>Trouver d'autres figures à tracer à <a href="https://py.processing.org/tutorials/drawing/" target="_blank">cette adresse</a> et laisser parler son talent artistique...</li>
+</ol>
+<h3 id="15-vers-les-tests">1.5 Vers les tests...<a class="headerlink" href="#15-vers-les-tests" title="Permanent link">⚓︎</a></h3>
+<iframe src="https://trinket.io/embed/python/d9e1c58ea0" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p><a href="https://trinket.io/library/trinkets/d9e1c58ea0">Lien vers l'activité</a> pour une utilisation dans une nouvelle fenêtre.</p>
+<p>L'objectif est de faire bouger la balle... puis la faire rebondir !</p>
+<h4 id="151-mouvement-de-la-balle">1.5.1 Mouvement de la balle<a class="headerlink" href="#151-mouvement-de-la-balle" title="Permanent link">⚓︎</a></h4>
+<p>Pour l'instant la balle est statique. Du moins elle <em>apparaît</em> statique, mais elle en fait redessinée au même endroit 25 fois par seconde !</p>
+<ol>
+<li>Comment faire en sorte qu'à chaque tour de boucle (25 fois par seconde donc) la balle ne soit pas redessinée au même endroit, mais légèrement décalée vers la droite ? </li>
+<li>Résoudre le problème de superposition des anciennnes balles afin de donner l'illusion d'un mouvement</li>
+<li>Stocker dans une variable appelée <code>dx</code> le décalage de l'abscisse.</li>
+</ol>
+<h4 id="152-rebond-de-la-balle">1.5.2 Rebond de la balle<a class="headerlink" href="#152-rebond-de-la-balle" title="Permanent link">⚓︎</a></h4>
+<p>Pour l'instant, notre balle s'enfuit désespérément... Comment détecter qu'elle est sortie de son aire de jeu ?</p>
+<h2 id="2-instructions-conditionnelles">2. Instructions conditionnelles<a class="headerlink" href="#2-instructions-conditionnelles" title="Permanent link">⚓︎</a></h2>
+<p>Un ordinateur ne fait pas que <em>stocker</em> des valeurs dans des variables et les faire évoluer.
+Il effectue aussi des <strong>tests</strong> pour déclencher (ou pas) d'autres actions. On parle alors d'<em>instructions conditionnelles</em>.</p>
+<h3 id="21-premier-test-elementaire">2.1 Premier test élémentaire<a class="headerlink" href="#21-premier-test-elementaire" title="Permanent link">⚓︎</a></h3>
+<p>La syntaxe d'un test en Python est la suivante :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
+  <span class="n">instruction</span>
+</code></pre></div></td></tr></table></div>
+Remarquez bien :
+- les deux points qui suivent la condition : ils signalent l'ouverture d'un bloc de code, celui qui sera exécuté si la condition est valide.
+- le léger décalage (appelé <strong>indentation</strong>) de la ligne (ou les lignes) contenant l'instruction à exécuter. Cette indentation n'est pas «décorative» : elle est cruciale pour que Python comprenne quelle partie de code doit être exécutée ou pas.</p>
+<p><strong>Exemple</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">heure</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="k">if</span> <span class="n">heure</span> <span class="o">&gt;</span> <span class="mi">12</span> <span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;j&#39;ai faim&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Ce code va renvoyer <code>j'ai faim</code> car la condition est validée. On dit que la condition est «vraie».</p>
+<h4 id="212-le-retour-de-la-balle-fuyante">2.1.2 Le retour de la balle fuyante<a class="headerlink" href="#212-le-retour-de-la-balle-fuyante" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>Détectez que la balle est sortie en faisant apparaître le mot "sortie..." en console (le mot apparaîtra sous la zone de dessin).</li>
+<li>Modifiez le code pour que la balle reparte dans l'autre sens au lieu de s'enfuir.</li>
+</ol>
+<p><strong>Point d'étape</strong></p>
+<iframe src="https://trinket.io/embed/python/ba7d676493" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<ol>
+<li>Faites rebondir la balle sur les <strong>deux</strong> murs</li>
+<li>Faites en sorte que la balle n'ait plus qu'un simple mouvement latéral mais un mouvement «de travers»</li>
+<li>Gérez les rebonds, rajoutez de l'aléatoire...</li>
+</ol>
+<p>Voir un exemple de correction, ici : <a href="https://trinket.io/library/trinkets/05b7d7f7c3">https://trinket.io/library/trinkets/05b7d7f7c3</a>... et amusez-vous à modifier ce code !</p>
+<h2 id="3-les-fonctions-en-python">3. Les fonctions en Python<a class="headerlink" href="#3-les-fonctions-en-python" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-principe-general-a-quoi-sert-une-fonction">3.1 Principe général : à quoi sert une fonction ?<a class="headerlink" href="#31-principe-general-a-quoi-sert-une-fonction" title="Permanent link">⚓︎</a></h3>
+<p>L'idée principale qu'il faut garder en tête est celle-ci : une fonction <strong>est un raccourci</strong>, permettant une utilisation simple et rapide d'un processus répétitif.</p>
+<p>Par exemple, en Scratch, si on sait que l'on va avoir à tracer beaucoup de carrés, on crée un bloc <code>carre</code> :</p>
+<p><img alt="" src="../data/scratch1.png" /></p>
+<p>Il est à noter que lorsqu'on créé le bloc <code>carre</code>, rien ne se passe, rien n'est tracé. Ce n'est que lorqu'on va se servir de ce bloc (on dira qu'on <em>appelle</em> le bloc) qu'une action aura lieu.</p>
+<p>Pour faire un parallèle avec la vie courante, vous avez tous appris un jour à faire vos lacets. C'est une fonction (un ensemble de gestes et de techniques) qui est disponible et dont vous ne vous servez que lorsque vous en avez besoin (quand vos lacets sont défaits).</p>
+<h3 id="32-premieres-fonctions-en-python">3.2 Premières fonctions en Python.<a class="headerlink" href="#32-premieres-fonctions-en-python" title="Permanent link">⚓︎</a></h3>
+<p>Une fonction en Python se déclare par le mot clé <code>def</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hymne_anglais</span><span class="p">():</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our gracious Queen&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Long live our noble Queen&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our Queen&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>À remarquer :</strong>
+- les parenthèses à la fin du nom de la fonction (indispensables) : elles contiendront plus tard les paramètres de la fonction.
+- le deux points : à la fin de la déclaration du nom de la fonction. Ils vont déclencher une indentation automatique du reste du corps de la fonction.</p>
+<p><strong>Utilisation :</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt; hymne_anglais()
+God save our gracious Queen
+Long live our noble Queen
+God save our Queen
+</code></pre></div></td></tr></table></div></p>
+<p>Cette fonction n'a <strong>aucun paramètre d'entrée</strong>. Elle affichera toujours la même chose lorsqu'on l'appellera. </p>
+<h3 id="33-parametres-dune-fonction">3.3 Paramètres d'une fonction<a class="headerlink" href="#33-parametres-dune-fonction" title="Permanent link">⚓︎</a></h3>
+<p>L'inconvénient majeur des fonctions précédentes est qu'elles produisent <strong>toujours</strong> la même chose.<br />
+Le carré en Scratch fera toujours 50 pixels de côté, l'hymne affiché sera toujours l'hymne anglais... 
+Pour améliorer ceci, il est possible de donner à la fonction un (ou plusieurs) <strong>paramètre</strong>(s).</p>
+<p><img alt="" src="../data/scratch2.png" /></p>
+<p>La fonction <code>carré()</code> comporte maintenant un paramètre, qu'on a appelé <code>coté</code>, mais qu'on aurait pu appeler <code>n</code>, <code>x</code>, ou <code>djhfidshflsdm</code>. Cela n'a aucune influence sur le fonctionnement du code. Mais ça en a une sur la compréhension de celui-ci ! On choisira donc toujours un nom explicite.</p>
+<p>Lorsqu'on appelle ensuite la fonction <code>carre(100)</code>, la fonction est exécutée avec à la place de la variable <code>coté</code> la valeur <code>100</code>.  Elle trace donc un carré de côté 100.</p>
+<p>En Python, créons par exemple une fonction <code>hymne(pays)</code>  :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hymne</span><span class="p">(</span><span class="n">pays</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">pays</span> <span class="o">==</span> <span class="s2">&quot;ANG&quot;</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our gracious Queen&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Long live our noble Queen&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our Queen&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pays</span> <span class="o">==</span> <span class="s2">&quot;FRA&quot;</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Allons enfants de la patri-i-euh&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le jour de gloire est arrivé&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Notre fonction comporte maintenant un paramètre qui va influer sur l'action de la fonction :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt; hymne(&quot;ANG&quot;)
+God save our gracious Queen
+Long live our noble Queen
+God save our Queen
+
+&gt;&gt;&gt; hymne(&quot;FRA&quot;)
+Allons enfants de la patri-i-euh
+Le jour de gloire est arrivé
+
+&gt;&gt;&gt; hymne(&quot;USA&quot;)
+
+&gt;&gt;&gt; hymne(5)
+
+&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p><strong>À remarquer :</strong>
+- L'utilisateur de la fonction peut utiliser la fonction <code>hymne()</code> avec des valeurs du paramètre <code>pays</code>non prévus par le programmeur. Dans notre cas, cela n'est pas grave (il ne se passe rien), mais parfois cela peut provoquer une erreur.</p>
+<h3 id="34-fonctions-utilisant-dautres-fonctions">3.4 Fonctions utilisant d'autres fonctions<a class="headerlink" href="#34-fonctions-utilisant-dautres-fonctions" title="Permanent link">⚓︎</a></h3>
+<p>Le code précédent peut aussi s'écrire de cette manière :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">hymne_anglais</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our gracious Queen&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Long live our noble Queen&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;God save our Queen&quot;</span><span class="p">)</span>    
+
+
+<span class="k">def</span> <span class="nf">hymne_francais</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Allons enfants de la patri-ie-euh&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le jour de gloire est arrivé&quot;</span><span class="p">)</span>   
+
+
+<span class="k">def</span> <span class="nf">hymne</span><span class="p">(</span><span class="n">pays</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pays</span> <span class="o">==</span> <span class="s2">&quot;ANG&quot;</span><span class="p">:</span>
+        <span class="n">hymne_anglais</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">pays</span> <span class="o">==</span> <span class="s2">&quot;FRA&quot;</span><span class="p">:</span>
+        <span class="n">hymne_francais</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Ce type d'écriture de code (qu'on appellera <em>écriture modulaire</em>) est une bonne habitude à prendre car elle sépare les différentes actions en fonctions spécifiques. Si je dois rajouter un vers à l'hymne français, je vais uniquement toucher à la fonction <code>hymne_francais()</code>, et pas aux autres fonctions qui ne sont pas concernées.</p>
+<h3 id="35-fonctions-renvoyant-une-valeur">3.5 Fonctions renvoyant une valeur<a class="headerlink" href="#35-fonctions-renvoyant-une-valeur" title="Permanent link">⚓︎</a></h3>
+<p>⚠ <strong>Très important</strong> ⚠</p>
+<p>Jusqu'à présent, les fonctions utilisées étaient uniquement des «raccourcis» permettant de mieux structurer le code et d'éviter les répétitions.<br />
+Or, les fonctions peuvent être encore plus intéressantes lorsqu'on comprend qu'elles peuvent <strong>renvoyer une valeur</strong>. On s'approche alors de la définition mathématique du concept de fonction.</p>
+<p>Le mot-clé pour le renvoi d'une valeur est l'instruction <code>return</code>.</p>
+<p><strong>Exemple :</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">aucarré</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div></td></tr></table></div>
+<p>À l'utilisation, cette fonction ne semble pas pour l'instant différente des précédentes :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt; aucarré(4)
+16
+&gt;&gt;&gt;
+</code></pre></div></td></tr></table></div>
+<p>Ce qu'il faut absolument comprendre, c'est que <code>aucarré(4)</code> est en fait un <strong>nombre</strong>. 
+Et donc, je peux l'utiliser dans des calculs :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;&gt;&gt; 12 + aucarré(5)
+37
+</code></pre></div></td></tr></table></div>
+<h4 id="36-application-a-un-exercice-classique-de-mathematiques">3.6 Application à un exercice classique de mathématiques<a class="headerlink" href="#36-application-a-un-exercice-classique-de-mathematiques" title="Permanent link">⚓︎</a></h4>
+<p>Imaginons deux tarifs A et B pour le prix d'un ticket d'entrée au cinéma.
+- Tarif A : 7 € la place
+- Tarif B : 13 € l'abonnement puis 5 € la place</p>
+<p>Pour un nombre <code>n</code> d'entrées, quel est le tarif le plus avantageux ?</p>
+<ol>
+<li>Créer une fonction <code>tarif_A(n)</code> qui renvoie le prix pour <code>n</code> entrées au tarif A.</li>
+<li>Créer une fonction <code>tarif_B(n)</code> qui renvoie le prix pour <code>n</code> entrées au tarif B.</li>
+<li>Créer une fonction <code>meilleur_choix(n)</code> qui écrira <code>"il faut choisir le tarif A"</code> ou bien <code>"il faut choisir le tarif B"</code> en fonction du tarif le moins cher. Cette fonction ne renverra aucune valeur.</li>
+</ol>
+<p><strong>Correction</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tarif_A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">7</span><span class="o">*</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+<span class="k">def</span> <span class="nf">tarif_B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">13</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">p</span>
+
+<span class="k">def</span> <span class="nf">meilleur_choix</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">tarif_A</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tarif_B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il faut choisir le tarif A&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">tarif_A</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">tarif_B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il faut choisir le tarif B&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">tarif_A</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="n">tarif_B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;les deux tarifs sont équivalents&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+    <script src="../../js/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA / G.Lassus
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:nom.prenoms@ac-amiens.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../scripts/mathjax.js"></script>
+      
+        <script src="../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>
