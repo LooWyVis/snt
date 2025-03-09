@@ -11,7 +11,6 @@
 !!! abstract "Le [programme](https://eduscol.education.fr/1670/programmes-et-ressources-en-sciences-numeriques-et-technologie-voie-gt) de SNT est articulé autour de sept thèmes:"
 
     === "Photo numérique"
-
         ![](data/logo_photo.png){align=left}
         
         Les technologies de la photographie argentique ont eu une évolution très lente, liée aux progrès en optique, mécanique et chimie. Ce n’est plus du tout le cas de l’évolution actuelle, davantage due aux algorithmes qu’à la physique : algorithmes de développement et d’amélioration de l’image brute, algorithmes d’aide à la prise de vue. La photographie numérique présente un coût marginal très faible et une diffusion par internet facile et immédiate : chaque jour, des milliards de photos sont prises et partagées.
@@ -39,7 +38,7 @@
 
         Comment ces réseaux gèrent les données des utilisateurs et comment mettent-ils en place les services de recommandation/suggestion?
 
-    === "Localisation /cartographie"
+    === "Localisation/Cartographie"
         ![](data/logo_carto.png){align=left}
 
         La cartographie est essentielle pour beaucoup d’activités : agriculture, urbanisme, transports, loisirs, etc. Elle a été révolutionnée par l’arrivée des cartes numériques accessibles depuis les ordinateurs, tablettes et téléphones, bien plus souples à l’usage que les cartes papier.
@@ -47,11 +46,11 @@
         Comment se repérer sur ces cartes et comment calculer un itinéraire?
 
     === "Données structurées"
-    ![](data/logo_data.png){align=left}
-    
-    Les données constituent la matière première de toute activité numérique. Afin de permettre leur réutilisation, il est nécessaire de les conserver de manière persistante. Les structurer correctement garantit que l’on puisse les exploiter facilement pour produire de l’information.
+        ![](data/logo_data.png){align=left}
+        
+        Les données constituent la matière première de toute activité numérique. Afin de permettre leur réutilisation, il est nécessaire de les conserver de manière persistante. Les structurer correctement garantit que l’on puisse les exploiter facilement pour produire de l’information.
 
-    Comment traiter ces données ?
+        Comment traiter ces données ?
 
     === "Objets connectés"
         ![](data/logo_objets.png){align=left}
