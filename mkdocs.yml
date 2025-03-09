@@ -2,7 +2,6 @@ site_name: "SNT"
 site_url: https://loowyvis.github.io/snt
 
 
-
 theme:
   name: material
   site_url: ""
@@ -85,6 +84,7 @@ plugins:
  
  # - mkdocs-jupyter
 
+
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
@@ -95,6 +95,7 @@ extra:
     #- icon: fontawesome/solid/school
       #link: https://lycee.fr
       #name: nom du lycée
+
 
 extra_javascript:
   - scripts/mathjax.js
