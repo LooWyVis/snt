@@ -32,6 +32,21 @@ Rendez-vous sur la page [https://console.basthon.fr/](https://console.basthon.fr
 
 ![](data/bast1.png)
 
+### 2.3 Directement sur ce site
+
+Dans certains exercices cours, nous serons peut-être amené à coder içi
+
+Exemple :
+
+<div>
+  <textarea id="python-code" rows="6" cols="60">
+print("Hello, World!")
+  </textarea>
+  <br>
+  <button onclick="interpretACE('python-code', 'v')">Exécuter</button>
+  <pre id="output"></pre>
+</div>
+
 
 ## 3. Script ou console ???
 
