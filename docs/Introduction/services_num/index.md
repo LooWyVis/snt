@@ -1,3 +1,3 @@
 # Les services numériques au lycée
 
-![image](data/servicenum.png){: .center}
+Décrire les services numériques du lycée
