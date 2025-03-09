@@ -38,14 +38,7 @@ Dans certains exercices cours, nous serons peut-être amené à coder içi
 
 Exemple :
 
-<div>
-  <textarea id="python-code" rows="6" cols="60">
-print("Hello, World!")
-  </textarea>
-  <br>
-  <button onclick="interpretACE('python-code', 'v')">Exécuter</button>
-  <pre id="output"></pre>
-</div>
+{{ IDEv()}}
 
 
 ## 3. Script ou console ???
