@@ -63,6 +63,7 @@ function paintACE(theme) {
     };
 }
 
+/*
 window.addEventListener('load', () => {
     var p = document.querySelector('label[for="__palette_2"]')
     console.log(p)
@@ -72,3 +73,5 @@ window.addEventListener('load', () => {
         paintACE('ace/theme/tomorrow_night_bright')
     }
 });
+
+*/
