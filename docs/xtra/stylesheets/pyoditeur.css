@@ -114,7 +114,6 @@ z-index: 1; /* might be a bit drastic */
 .ace_gutter > .ace_layer {
 color: rgba(87,147,240);
 background-color: rgba(46,48,63,0);
-border-right: solid 1px rgba(87,147,240); 
 }
 
 /* modification of ace-tomorrow-night-bright theme */
