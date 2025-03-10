@@ -2,78 +2,76 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("ready");
     $('[id^=editor_]').each(function() {
         let number = this.id.split('_').pop();
-        //let url_pyfile = $('#'+this.id).text()  // Extracting url from the div before Ace layer
-        let url_pyfile = $('#content_'+this.id).text()  // Extracting url from the div before Ace layer
-    
-        let id_editor = "editor_" + number
-        function createACE(id_editor){
+        let contentElement = $('#content_' + this.id);
+        let url_pyfile = contentElement.length ? contentElement.text() : '';
+
+        let id_editor = "editor_" + number;
+
+        function createACE(id_editor) {
             ace.require("ace/ext/language_tools");
-            var editor = ace.edit(id_editor, {
+            let editor = ace.edit(id_editor, {
                 theme: "ace/theme/tomorrow_night_bright",
                 mode: "ace/mode/python",
                 autoScrollEditorIntoView: true,
                 maxLines: 30,
                 minLines: 6,
                 tabSize: 4,
-                printMargin: false   // hide ugly margins...
+                printMargin: false
             });
+
             editor.setOptions({
                 enableBasicAutocompletion: true,
                 enableSnippets: true,
                 enableLiveAutocompletion: false
             });
-            // Decode the backslashes into newlines for ACE editor from admonitions 
-            // (<div> autocloses in an admonition) 
-            editor.getSession().setValue(url_pyfile.replace(/backslash_newline/g, "\n"))  
+
+            // Remplacement sécurisé des backslashes
+            editor.getSession().setValue(url_pyfile.replace(/backslash_newline/g, "\n"));
+
+            return editor;
         }
-        window.IDE_ready = createACE(id_editor)           // Creating Ace Editor #id_editor
-    
+
+        createACE(id_editor);
+
         if (url_pyfile === '') { 
-            let editor = ace.edit(id_editor)
-            editor.getSession().setValue('\n\n\n\n\n');  // Creates 6 empty lines for UX
+            let editor = ace.edit(id_editor);
+            editor.getSession().setValue('\n\n\n\n\n');  // Crée 6 lignes vides
         }
     });
-    
-    // Javascript to upload file from customized buttons
+
+    // Gestion de l'upload de fichiers
     $('[id^=input_editor_]').each(function() {
         let number = this.id.split('_').pop();
-        let id_editor = "editor_" + number
-        document.getElementById('input_'+id_editor).addEventListener('change', function(e) {readFile(e, id_editor)}, false);
+        let id_editor = "editor_" + number;
+        let inputElement = document.getElementById('input_' + id_editor);
+
+        if (inputElement) {
+            inputElement.addEventListener('change', function(e) { readFile(e, id_editor); }, false);
+        }
     });
-    
-    function readFile (evt, id_editor) {
-        var files = evt.target.files;
-        var file = files[0];
-        var reader = new FileReader();
-        var editor = ace.edit(id_editor);
+
+    function readFile(evt, id_editor) {
+        let files = evt.target.files;
+        if (!files.length) return;
+        
+        let reader = new FileReader();
+        let editor = ace.edit(id_editor);
+
         reader.onload = function(event) {
             editor.getSession().setValue(event.target.result);
-        }
-        reader.readAsText(file)
-    };
-    
-    // turn off copy paste of code... A bit aggressive but necessary
-    // $(".highlight").bind('copy paste',function(e) { e.preventDefault(); return false; });
-    
-    
-    // Following blocks paint the IDE according to the mkdocs light/dark mode 
+        };
+
+        reader.readAsText(files[0]);
+    }
+
+    // Appliquer le thème ACE en fonction du mode dark/light de mkdocs
     function paintACE(theme) {
-        for (var editeur of document.querySelectorAll('div[id^="editor_"]')) {
+        document.querySelectorAll('div[id^="editor_"]').forEach(editeur => {
             let editor = ace.edit(editeur.id);
             editor.setTheme(theme);
             editor.getSession().setMode("ace/mode/python");
-        };
+        });
     }
-    
-    window.addEventListener('load', () => {
-        var p = document.querySelector('label[for="__palette_2"]')
-        console.log(p)
-        if (p.hidden) {
-            paintACE('ace/theme/crimson_editor')
-        } else {
-            paintACE('ace/theme/tomorrow_night_bright')
-        }
-    });
-    
-}); 
 
+    paintACE('ace/theme/tomorrow_night_bright');
+});
