@@ -1,4 +1,4 @@
-hide : true
+hide : false
 title : T7 Données structurées
 nav :
     - Cours : cours.md

@@ -1,4 +1,4 @@
-hide : true
+hide : false
 title : PIX
 nav :
     - Activités : cours.md

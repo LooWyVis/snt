@@ -16,7 +16,7 @@ Ces cercles forment des angles par rapport au centre de la Terre : la latitude e
 Pour comprendre leur utilisation, allez à l'activité 1 :
 
 
-[ :arrow_right: Activité 1 :  villes du monde](../Activité1_GPS/){ .md-button }
+[ :arrow_right: Activité 1 :  villes du monde](./Activité1_GPS.md){ .md-button }
 
 
 ### 1.2 Différentes conventions d'écriture d'angles
@@ -189,7 +189,7 @@ Intersection de 3 sphères :
 	![](data/satstat.png){: .center} 
 
 
-[ :arrow_right: Activité 2 :  Métadonnées EXIF](../Activité2_Exif/){ .md-button }
+[ :arrow_right: Activité 2 :  Métadonnées EXIF](./Activité2_Exif.md){ .md-button }
 
 
 
@@ -266,7 +266,7 @@ Ainsi toutes les applications ayant recours à la géolocalisation (et elles son
 
 
 
-[ :arrow_right: Activité 3 :  GéoPortail](./Activité3_GeoPortail/){ .md-button }
+[ :arrow_right: Activité 3 :  GéoPortail](./Activité3_GeoPortail.md){ .md-button }
 
 
 

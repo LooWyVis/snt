@@ -1,4 +1,4 @@
-hide : true
+hide : false
 title : IA
 nav :
     - Cours : cours.md
