@@ -32,14 +32,6 @@ Rendez-vous sur la page [https://console.basthon.fr/](https://console.basthon.fr
 
 ![](data/bast1.png)
 
-### 2.3 Directement sur ce site
-
-Dans certains exercices cours, nous serons peut-être amené à coder içi
-
-Exemple :
-
-{{ IDEv()}}
-
 
 ## 3. Script ou console ???
 
