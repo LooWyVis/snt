@@ -1,5 +1,7 @@
-hide : true
+hide: true
 nav:
     - Accueil : index.md
-    - Introduction : Theme_Introduction/services_num/
-    - ...
+    - Introduction:
+        - Les services numériques au lycée : Theme_Introduction/services_num.md
+        - Prise en main de Moodle : Theme_Introduction/moodle.md
+        - Le binaire et le codage de l'information numérique : Theme_Introduction/binaire.md
