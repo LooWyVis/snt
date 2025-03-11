@@ -1,5 +1,5 @@
 hide : false
-title : T6 Internet
+title : T5 Internet
 nav :
     - Cours : cours.md
     - ...

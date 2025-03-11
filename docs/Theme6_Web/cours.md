@@ -8,11 +8,11 @@
 ## 2. Activité 1 : HTML et CSS
 
 
-[ :arrow_right: Activité 1 : ```html / css```  ](../activite_1_html_css/){ .md-button }
+[ :arrow_right: Activité 1 : ```html / css```  ](./activite_1_html_css.md){ .md-button }
 
 ## 3. Activité 2 : des liens et des images
 
-[ :arrow_right: Activité 2 : travail sur les liens  ](../activite_2_des_liens/){ .md-button }
+[ :arrow_right: Activité 2 : travail sur les liens  ](./activite_2_des_liens.md){ .md-button }
 
 ## 4. Activité 3 : à vous !
 
