@@ -1,6 +1,6 @@
 
 !!! abstract ":star: Séance actuelle :star:"
-    - [Introduction](Theme_Introduction/services_num/index.md){. target="_blank"}
+    - [Introduction](Theme0_Introduction/services_num/index.md){. target="_blank"}
 
 
 ![image](data/logo_SNT.png){: .center width=30%}
