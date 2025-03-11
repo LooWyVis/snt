@@ -40,6 +40,8 @@ Monsieur Z habite 12 rue des églantiers à Cenon (33). Il veut savoir s'il peut
 #### 2.2.5 Au XIXème siècle
 Au XIXe siècle, comment appelait-on l’actuelle Avenue Thiers, sur la rive droite de Bordeaux ?
 
+<!--
+
 {#
 ??? tip "Corrections"
     1. Territoires et transports / Foncier, cadastre et urbanisme / Parcelles cadastrales, puis mesure de surface (clé à molette)
@@ -47,6 +49,8 @@ Au XIXe siècle, comment appelait-on l’actuelle Avenue Thiers, sur la rive dro
     3. Territoires et transports / Foncier, cadastre et urbanisme / Restrictions UAS catégorie Ouverte et aéromodélisme. Hauteur max de vol : 50m
     4. Territoires et transports / Equipements publics / Services postaux. D'après l'isochrone 15mn à pied, un bureau de poste est accessible.
 #}
+
+-->
 
 ### 2.3 Recherche de renseignements en source ouverte ([OSINT](https://www.lesassisesdelacybersecurite.com/Le-blog/Glossaire/Open-Source-Intelligence-OSINT){. target="_blank"})
 #### 2.3.1 Énigme 1
@@ -56,6 +60,8 @@ Au XIXe siècle, comment appelait-on l’actuelle Avenue Thiers, sur la rive dro
 
 3. Que s'est-il passé à cet endroit durant la Seconde Guerre mondiale ?
 
+<!--
+
 {#
 ??? tip "Corrections"
     1. Territoires et transports / Description du territoire / Zones interdites à la prise de vue aérienne (ZIPVA). Zone interdite
@@ -63,6 +69,7 @@ Au XIXe siècle, comment appelait-on l’actuelle Avenue Thiers, sur la rive dro
     3. C'était un lieu où l'armée allemande fusillait les résistants.
 #}
 
+-->
 
 #### 2.3.2 Énigme 2 :skull:
 ![image](data/fdcarte.png){: .center width=60%}
@@ -74,8 +81,13 @@ Quelle est cette société ?
     Développement Durable / Mer et Littoral
 
 {#
+
+<!--
+
 ??? tip "Correction"
     - Développement Durable / Mer et Littoral / Câbles et conduites sous-marines.
     - L'endroit est Saint-Hilaire-de-Riez en Vendée.
     - Google va y faire arriver un câble reliant la France et les USA : [https://france3-regions.francetvinfo.fr/pays-de-la-loire/vendee/vendee-arrivee-du-fur-cable-transatlantique-google-saint-hilaire-rietz-1799482.html](https://france3-regions.francetvinfo.fr/pays-de-la-loire/vendee/vendee-arrivee-du-fur-cable-transatlantique-google-saint-hilaire-rietz-1799482.html){. target="_blank"}
 #}
+
+-->

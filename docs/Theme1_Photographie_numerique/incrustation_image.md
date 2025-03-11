@@ -39,6 +39,7 @@ L'objectif est bien sûr d'intégrer Grumpy Cat dans le hall du lycée.
 
 Le reste de l'activité se passe sur [Capytale](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/525f-180942).
 #}
+
 <!--
 ## 2. Fusion des deux images
 

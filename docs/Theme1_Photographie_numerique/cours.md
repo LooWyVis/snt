@@ -105,7 +105,7 @@ Comment ces 3 couleurs peuvent-elles générer toutes les autres couleurs ?
     On considèrera que le fichier ne contient que les informations relatives à chaque pixel, et qu'aucun algorithme de compression n'a été utilisé.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Nombre de pixels :
@@ -133,7 +133,7 @@ Comment ces 3 couleurs peuvent-elles générer toutes les autres couleurs ?
     *Aide : pour vous éviter des calculs, vous pouvez utiliser le convertisseur binaire-décimal disponible à [cette adresse](https://sebastienguillon.com/test/javascript/convertisseur.html){. target="_blank"}.*
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Les 3 premiers octets de cette série de bits nous donneront les valeurs R, G, B du premier pixel en haut à gauche de l'image.
@@ -241,7 +241,7 @@ Cet algorithme compense les déformations optiques dues aux lentilles de l'objec
     |  |  |  |
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         A. Algorithmes essayant de reproduire le plus fidèlement possible une réalité | B. Algorithmes essayant d’imiter un effet artistique de la photo argentique | C. Algorithmes produisant une photo d’une situation qui n’a jamais existé |
@@ -325,6 +325,8 @@ Autre image à analyser :
 3. Dans le même temps, qu’ont décidé de faire Samsung et Google ?
 4. Quel est l’avantage à avoir de plus grands photosites dans un capteur ?
 
+<!--
+
 ??? tip "Correction"
     1. Le nombre de méga-pixels a augmenté entre entre l’iPhone 6 et l’iPhone 6S.
     2. La conséquence a été que les photos sont devenues de moins bonne qualité en basse luminosité.
@@ -332,6 +334,8 @@ Autre image à analyser :
     4. Avoir de plus grands photosites permet de mieux capter la lumière en situation de faible luminosité et donc d'avoir des photos de meilleure qualité.
 
 #}
+
+-->
 
 
 [ :arrow_right: Activité  :  Métadonnées EXIF](../Theme2_Localisation_Cartographie/Activité2_Exif.md){ .md-button }

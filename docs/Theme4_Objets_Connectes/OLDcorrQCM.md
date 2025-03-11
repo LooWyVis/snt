@@ -1,5 +1,7 @@
 # Correction du QCM Microbit
 
+<!--
+
 ## Question 1
 ![image](data/corrQCM/1.png){: .center}
 
@@ -29,3 +31,5 @@
 
 ## Question 10
 ![image](data/corrQCM/10.png){: .center}
+
+-->
