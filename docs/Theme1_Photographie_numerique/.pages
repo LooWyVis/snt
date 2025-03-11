@@ -2,5 +2,6 @@ hide : false
 title : T1 Photographie numérique
 nav :
     - Cours : cours.md
-    - Activité 1 : modification_image.md
-    - Activité 2 : incrustation_image.md
+    - Activité 1 Modification d'une image en Python : modification_image.md
+    - Activité 2 Incrustation d'une image en Python : incrustation_image.md
+    - ...
