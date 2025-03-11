@@ -99,13 +99,13 @@ extra:
 
 extra_javascript:
   - scripts/mathjax.js
-  - xtra/javascripts/interpreter.js
+  - docs/scripts/interpreter.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
 
 extra_css:
   - stylesheets/extra.css
-  - xtra/stylesheets/pyoditeur.css
+  - docs/stylesheets/pyoditeur.css
 
 
 copyright: 'CC BY-SA / Resources issues du Github de <a href="https://github.com/glassus" target="_blank">G.Lassus</a>'
