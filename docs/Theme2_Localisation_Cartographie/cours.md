@@ -266,7 +266,7 @@ Ainsi toutes les applications ayant recours à la géolocalisation (et elles son
 
 
 
-[ :arrow_right: Activité 3 :  GéoPortail](../Activité3_GeoPortail/){ .md-button }
+[ :arrow_right: Activité 3 :  GéoPortail](./Activité3_GeoPortail/){ .md-button }
 
 
 
@@ -280,4 +280,4 @@ Ce qu'on appelle communément le «guidage GPS» combine à la fois le repérage
 
 
 
-[ :arrow_right: Activité 4 :  Itinéraires](../Activité4_Itineraires/){ .md-button }
+[ :arrow_right: Activité 4 :  Itinéraires](./Activité4_Itineraires.md){ .md-button }
