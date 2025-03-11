@@ -1,4 +1,4 @@
-hide : false
+hide : true
 title : T4 Objets connectés
 nav :
     - Cours : cours.md

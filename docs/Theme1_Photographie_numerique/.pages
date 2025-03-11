@@ -1,4 +1,4 @@
-hide : false
+hide : true
 title : T1 Photographie numérique
 nav :
     - Cours : cours.md

@@ -1,4 +1,4 @@
-hide : false
+hide : true
 title : T2 Localisation-Cartographie
 nav :
     - Cours : cours.md

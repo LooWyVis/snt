@@ -1,4 +1,4 @@
-hide : false
+hide : true
 title : T5 Internet
 nav :
     - Cours : cours.md
