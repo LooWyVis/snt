@@ -37,11 +37,11 @@ Comment ces 3 couleurs peuvent-elles générer toutes les autres couleurs ?
 
 
 !!! abstract "Activité 1 sur Capytale : modification en Python des couleurs d'une image"
-    - Cliquez sur [ce lien](../modification_image/){. target="_blank"}.
+    - Cliquez sur [ce lien](./modification_image.md){. target="_blank"}.
 
 
 !!! abstract "Activité 2 sur Capytale : Incrustation d'une image en Python"
-    - Cliquez sur [ce lien](../incrustation_image/){. target="_blank"}.
+    - Cliquez sur [ce lien](./incrustation_image.md){. target="_blank"}.
 
 
 
@@ -271,7 +271,6 @@ Cet algorithme compense les déformations optiques dues aux lentilles de l'objec
     - On peut aussi appliquer ensuite à l'image d'autres transformations (filtres, modification des pixels), qui amènent naturellement à se poser des questions sur la confiance qu'on peut avoir dans une photographie (en matière judiciaire notamment).
 
 
-{#
 ## 5.6 Clone detection
 
 À l'aide de la fonctionnalité Clone Detection du site [https://29a.ch/photo-forensics/#clone-detection](https://29a.ch/photo-forensics/#clone-detection){. target="_blank"}, analysez l'image suivante :
@@ -293,9 +292,6 @@ Autre image à analyser :
 
 [https://clipdrop.co/fr/cleanup](https://clipdrop.co/fr/cleanup){. target="_blank"}
 
-#}
-
-{#
 
 ### Annexe :  Analyse d'un article
 
@@ -333,7 +329,6 @@ Autre image à analyser :
     3. Dans le même temps, Samsung et Google ont diminué le nombre de méga-pixels mais augmenté la taille des photosites.
     4. Avoir de plus grands photosites permet de mieux capter la lumière en situation de faible luminosité et donc d'avoir des photos de meilleure qualité.
 
-#}
 
 -->
 
