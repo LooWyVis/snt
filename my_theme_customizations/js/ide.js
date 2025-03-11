@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("ACE Editor Initialization Started");
 
     function initACEEditor(id_editor) {
-        console.log("Initializing ACE Editor:", id_editor);
 
         // Vérifier si l'éditeur est déjà initialisé
         if (document.getElementById(id_editor).classList.contains("ace_editor")) {
-            console.log("Editor already initialized:", id_editor);
             return;
         }
 
@@ -40,29 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initAllEditors() {
-        console.log("Checking for editors...");
         document.querySelectorAll('[id^=editor_]').forEach(editor => {
             initACEEditor(editor.id);
         });
     }
-
-    // Initialiser tous les éditeurs après un délai (attente du chargement dynamique)
-    setTimeout(() => {
-        console.log("Executing initAllEditors after 1 second...");
-        initAllEditors();
-    }, 1000);
 
     // Deuxième vérification après 3 secondes pour s'assurer que tout est bien chargé
     setTimeout(() => {
         console.log("Final check after 3 seconds...");
         initAllEditors();
     }, 3000);
-
-    // Observer les ajouts dynamiques d'éditeurs
-    const observer = new MutationObserver(() => {
-        console.log("New elements detected in the DOM...");
-        initAllEditors();
-    });
 
     observer.observe(document.body, { childList: true, subtree: true });
 
@@ -78,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Appliquer le thème immédiatement puis après un délai
     paintACE('ace/theme/tomorrow_night_bright');
     setTimeout(() => {
-        console.log("Applying theme again...");
         paintACE('ace/theme/tomorrow_night_bright');
     }, 2000);
 });
